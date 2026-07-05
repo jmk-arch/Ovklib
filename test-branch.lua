@@ -98,24 +98,8 @@ local Library = setmetatable({
 
 local _UI_IS_VISIBLE = false;
 
-local MenuBlur = Lighting:FindFirstChild('LionMenuBlur') or Instance.new('BlurEffect');
-MenuBlur.Name = 'LionMenuBlur';
-MenuBlur.Size = 0;
-MenuBlur.Parent = Lighting;
-
 local function SetMenuBlur(Visible)
-	local Blur = Lighting:FindFirstChild('LionMenuBlur') or MenuBlur;
-	Blur.Name = 'LionMenuBlur';
-	Blur.Parent = Lighting;
-	Blur.Size = Visible and 20 or 0;
-
-	if not Visible then
-		for _, Effect in next, Lighting:GetChildren() do
-			if Effect:IsA('BlurEffect') then
-				Effect.Size = 0;
-			end;
-		end;
-	end;
+	return;
 end;
 
 local RainbowStep = 0
